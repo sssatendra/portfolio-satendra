@@ -1,0 +1,171 @@
+{
+  "main": {
+    "name": "Satendra Kumar R",
+    "initial" : "S",
+    "occupation": "Full Stack Developer",
+    "description": "Proficient in translating designs & wireframes into high-quality code, and writing application interface code via Javascript and ReactJS workflows. Adept at monitoring & maintaining frontend performance and troubleshooting & debugging the same to bolster overall performance.",
+    "image": "ProfilePic.jpeg",
+    "bio": "Hi there! I am Satendra! I'm currently 26 years old.. I've cloned many of the most popular web applications like Netflix, WhatsApp and working on many more. I'm currently pursuing my dream to become developer and I'm open for offers. Coding is the things I am passionate about and I desperately want to leave my mark in the world with it.",
+    "contactmessage": "Get in touch with me!",
+    "email": "sssatendra51@gmail.com",
+    "phone": "+91 8553109910",
+    "address": {
+      "street": "3rd 'C' Cross chamundinagar",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "zip": "560032"
+    },
+    "website": "Under Maintainence",
+    "resumedownload": "https://drive.google.com/file/d/1K5YdyniI5UpR1wntM1DtwcEYx_WaUv1e/view?usp=sharing",
+    "social": [
+      {
+        "name": "youtube",
+        "url": "https://www.youtube.com/#",
+        "className": "fa fa-youtube"
+      },
+      {
+        "name": "facebook",
+        "url": "https://www.facebook.com/satendra.vishwakarma.564/",
+        "className": "fa fa-facebook"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/satendra-kumar-006795148/",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "instagram",
+        "url": "https://www.instagram.com/iam_satendra_vishwakarma/",
+        "className": "fa fa-instagram"
+      },
+      {
+        "name": "github",
+        "url": "https://github.com/sssatendra",
+        "className": "fa fa-github"
+      }
+    ]
+  },
+  "resume": {
+    "skillmessage": "My Programming Language Proficiency",
+    "education": [
+      {
+        "school": "Impact College of Engineering and Applied Sciences",
+        "degree": "Bachelor's of Engineering, Computer Science",
+        "graduated": "July 2017",
+        "description": "Graduated with First Class Honours"
+      }
+    ],
+    "work": [
+      {
+        "company": "HGS (Windstream Enterprise)",
+        "title": "Network Engineer",
+        "years": "July 2018 - March 2021",
+        "description": "Troubleshooting Network issue on Data and Voice Circuits"
+      }
+    ],
+    "skills": [
+      
+      {
+        "name": "Web Development",
+        "level": "70%",
+        "image": "/WebDev.png"
+      },
+      {
+        "name": "HTML/CSS",
+        "level": "80%",
+        "image": "/html.png"
+      },
+      {
+        "name": "React Js",
+        "level": "70%",
+        "image": "/React.png"
+      },
+      {
+        "name": "NodeJS",
+        "level": "70%",
+        "image": "/Node.png"
+      },
+      {
+        "name": "Vanilla JavaScript",
+        "level": "60%",
+        "image": "/JavaScript.png"
+      },
+      {
+        "name": "Python",
+        "level": "70%",
+        "image": "/Python.png"
+      },
+      {
+        "name": "Git",
+        "level": "50%",
+        "image": "/Git.png"
+      }
+      
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Airbnb Clone (NextJS & TailwindCSS)",
+        "category": "NextJS Application",
+        "image": "/Airbnb.jpg",
+        "url": "https://airbnb-clone-phi-five.vercel.app/"
+      },
+      {
+        "title": "Flipkart Clone (MERN App)",
+        "category": "React Application",
+        "image": "/flipkart.jpg",
+        "url": "https://flipkart-clone-1a222.web.app/"
+      },
+      {
+        "title": "Netflix Clone (React JS)",
+        "category": "React Application",
+        "image": "/NetflixCover.jpg",
+        "url": "https://netflix-clone-da71e.web.app/"
+      },
+      {
+        "title": "Amazon Landing Page",
+        "category": "NextJS Application",
+        "image": "/Amazon.jpg",
+        "url": "https://amazon-next-js-clone-vert.vercel.app/"
+      },
+	  {
+        "title": "Tinder MERN Clone",
+        "category":"MERN Application",
+        "image":"/tinder-clone.jpg",
+        "url": "https://tinder-mern-db802.web.app/"
+      },
+	  
+      {
+        "title": "Disney+ Hotstar",
+        "category": "NextJS Application",
+        "image": "/Hotstar.jpg",
+        "url": "https://hotstar-clone-nine.vercel.app/"
+      },
+      {
+        "title": "Vocabulary MERN App",
+        "category": "MERN Application",
+        "image": "/Vocab.jpg",
+        "url": "https://vocabulary-app-ad78d.web.app/"
+      },
+      {
+        "title": "Weather App (ReactJS)",
+        "category": "React Application",
+        "image": "/Weather.jpg",
+        "url": "https://weather-app-1290d.web.app/"
+      }
+    ]
+  },
+  "testimonials": {
+    "testimonials": [
+      {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac diam at dui interdum scelerisque. Integer nibh dui, auctor a molestie eu, pellentesque vel nibh. Vestibulum ante ipsum primis",
+        "user": "Test"
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac diam at dui interdum scelerisque. Integer nibh dui, auctor a molestie eu, pellentesque vel nibh. Vestibulum ante ipsum primis",
+        "user": "Test"
+      }
+    ]
+  }
+}
