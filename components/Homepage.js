@@ -5,7 +5,7 @@ function Homepage({ data }) {
     return (
         <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 2.5 }} className="flex justify-evenly items-center flex-col md:flex-row my-16 pb-10">
             <div className="mx-16 w-2/4 lg:mt-1 lg:w-80">
-                <img src="https://satendra-portfolio-28383.web.app/images/ProfilePic.jpeg" className="hover:scale-105 transition transform duration-500 shadow-2xl rounded-full border-8 object-cover border-gray-800 " />
+                <img src="https://satendra-portfolio-28383.web.app/images/ProfilePic.jpeg" className="hover:scale-105 transition transform duration-500 shadow-2xl rounded-full border-8 border-gray-800 " />
             </div>
             <div className="text-white md:w-2/4 space-y-3 p-5 text-center lg:text-left break-words">
                 <p className="text-gray-400">{data.main.occupation}</p>

@@ -13,7 +13,7 @@ function Resume({ data }) {
     });
 
     return (
-        <div id="resume" className="p-5 flex justify-center items-center my-10 lg:my-32">
+        <div id="resume" className="py-20 flex justify-center items-center my-10 lg:my-32">
             <div className="flex-grow flex justify-center items-center w-2/4 h-5/6">
                 <ul className="text-white h-5/6">{networks}</ul>
             </div>

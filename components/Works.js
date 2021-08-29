@@ -3,7 +3,7 @@
 function Works({ data }) {
 
     return (
-        <div className="py-10 flex flex-col overflow-hidden " id="works">
+        <div className="py-20 flex flex-col overflow-hidden " id="works">
             <h1 className="text-white font-semibold text-xl text-center">CHECK OUT SOME OF MY WORKS.</h1>
             <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 content-center py-5">
                 {

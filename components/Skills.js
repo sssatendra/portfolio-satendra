@@ -4,8 +4,8 @@ import { motion } from "framer-motion"
 function Skills({ data }) {
     // console.log(data)
     return (
-        <div className="">
-            <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1 }} className="w-full text-center  flex flex-col" id="skills">
+        <div className="py-20" id="skills" >
+            <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1 }} className="w-full text-center  flex flex-col" >
                 <h1 className="font-semibold text-white text-xl lg:text-2xl text-center">{data.resume.skillmessage} </h1>
                 {
                     data.resume.skills.map((skill) => (
