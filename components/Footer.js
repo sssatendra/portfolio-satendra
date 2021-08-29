@@ -17,7 +17,7 @@ function Footer({ data }) {
         <ul className="text-white flex justify-center items-center">{networks}</ul>
       </div>
       <div className="mb-12">
-        <h1 className="text-2xl font-semibold">Made with <span className="text-red-700  text-3xl">❤️</span> in India</h1>
+        <h1 className="text-lg lg:text-2xl font-semibold">Made with <span className="text-red-700  text-3xl">❤️</span> in India</h1>
         <p> By Satendra Kumar R</p>
       </div>
     </div>
