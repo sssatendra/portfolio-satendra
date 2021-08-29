@@ -1,3 +1,5 @@
+import { Link } from "react-scroll"
+
 function Footer({ data }) {
 
   var networks = data.main.social.map(function (network) {
@@ -12,6 +14,7 @@ function Footer({ data }) {
   return (
 
     <div className="items-center text-white text-center my-8 ">
+      <Link to="home" smooth={true} duration={1000} className=" cursor-pointer px-5 py-4 animate-bounce bg-gray-800 rounded-full transition duration-300 hover:bg-blue-600 hover:text-red-400"><i class="fa fa-arrow-up animate-bounce fa-x"></i></Link>
       <hr />
       <div className="py-1">
         <ul className="text-white flex justify-center items-center">{networks}</ul>
