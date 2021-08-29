@@ -18,30 +18,31 @@
     "website": "Under Maintainence",
     "resumedownload": "https://drive.google.com/file/d/1K5YdyniI5UpR1wntM1DtwcEYx_WaUv1e/view?usp=sharing",
     "social": [
-      {
-        "name": "youtube",
-        "url": "https://www.youtube.com/#",
-        "className": "fa fa-youtube"
-      },
+      
       {
         "name": "facebook",
         "url": "https://www.facebook.com/satendra.vishwakarma.564/",
-        "className": "fa fa-facebook"
+        "className": "fa fa-facebook fa-2x transform duration-300"
       },
       {
         "name": "linkedin",
         "url": "https://www.linkedin.com/in/satendra-kumar-006795148/",
-        "className": "fa fa-linkedin"
+        "className": "fa fa-linkedin fa-2x transform duration-300"
       },
       {
         "name": "instagram",
         "url": "https://www.instagram.com/iam_satendra_vishwakarma/",
-        "className": "fa fa-instagram"
+        "className": "fa fa-instagram fa-2x transform duration-300"
       },
       {
         "name": "github",
         "url": "https://github.com/sssatendra",
-        "className": "fa fa-github"
+        "className": "fa fa-github fa-2x transform duration-300"
+      },
+      {
+        "name": "youtube",
+        "url": "https://www.youtube.com/#",
+        "className": "fa fa-youtube fa-2x transform duration-300"
       }
     ]
   },
@@ -99,6 +100,16 @@
         "name": "Git",
         "level": "50%",
         "image": "/Git.png"
+      },
+      {
+      "name": "Next JS",
+      "level": "50%",
+      "image": "/Next.png"
+      },
+      {
+        "name": "Tailwind CSS",
+        "level": "60%",
+        "image": "/tailwind.png"
       }
       
     ]
