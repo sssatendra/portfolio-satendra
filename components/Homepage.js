@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { Link } from "react-scroll"
 
 function Homepage({ data }) {
 
@@ -15,11 +16,13 @@ function Homepage({ data }) {
                  */}
                 <div className="">
                     <a className="border-2 py-2 px-5 a rounded-full transform duration-500 hover:scale-110 border-blue-600 hover:animate-pulse hover:bg-blue-600 cursor-pointer" href="https://drive.google.com/file/d/1K5YdyniI5UpR1wntM1DtwcEYx_WaUv1e/view" target="_blank">Download CV</a>
-                    <a href="" className="px-5  transform duration-500 hover:scale-110 py-2 w-32 mx-5 border-2 hover:bg-white hover:text-black cursor-pointer rounded-full">Contact</a>
+                    <Link to="contact" smooth={true} duration={2000} > 
+                     <a href="" className="px-5  transform duration-500 hover:scale-110 py-2 w-32 mx-5 border-2 hover:bg-white hover:text-black cursor-pointer rounded-full">Contact</a>
+                    </Link>
                 </div>
             </motion.div>
         </div>
     )
 }
-
+ 
 export default Homepage
