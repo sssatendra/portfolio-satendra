@@ -13,7 +13,7 @@ function Resume({ data }) {
     });
 
     return (
-        <div id="resume" className="py-20 flex justify-center items-center my-10 lg:my-32">
+        <div id="resume" className="py-20 flex justify-center items-center my-10 ">
             <div className="flex-grow flex justify-center items-center w-2/4 h-5/6">
                 <ul className="text-white h-5/6">{networks}</ul>
             </div>
@@ -26,6 +26,8 @@ function Resume({ data }) {
                 <p className="text-white p-1 mx-5 text-sm lg:text-xl">{data.main.address.city}</p>
                 <p className="text-white p-1 mx-5 text-sm lg:text-xl">{data.main.address.state}</p>
                 <p className="text-white p-1 mx-5 text-sm lg:text-xl">{data.main.address.zip}</p>
+                <p className="text-white p-1 mx-5 text-sm lg:text-xl">{data.main.phone}</p>
+                <p className="text-white p-1 mx-5 text-sm lg:text-xl">{data.main.email}</p>
             </div>
         </div>
     )
