@@ -1,10 +1,6 @@
 import { MenuIcon } from '@heroicons/react/solid'
 import { motion } from "framer-motion"
 import { Link } from "react-scroll"
-// import Tippy from "@tippyjs/react";
-// import "tippy.js/dist/tippy.css";
-// import "tippy.js/themes/light.css";
-// // import Menu from './Menu';
 import { useState } from 'react';
 
 

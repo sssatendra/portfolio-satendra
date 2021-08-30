@@ -15,7 +15,7 @@ function Homepage({ data }) {
                 {/* <a href="https://drive.google.com/file/d/1K5YdyniI5UpR1wntM1DtwcEYx_WaUv1e/view" target="_blank" className="px-5  transform duration-500 hover:scale-110 py-2 w-32 mx-5 border-2 border-blue-600 hover:animate-pulse hover:bg-blue-600 cursor-pointer rounded-full">Download CV</a>
                  */}
                 <div className="">
-                    <a className="border-2 py-2 px-5 a rounded-full transform duration-500 hover:scale-110 border-blue-600 hover:animate-pulse hover:bg-blue-600 cursor-pointer" href="https://drive.google.com/file/d/1K5YdyniI5UpR1wntM1DtwcEYx_WaUv1e/view" target="_blank">Download CV</a>
+                    <a className="border-2 py-2 px-5 a rounded-full transform duration-500 hover:scale-110 border-blue-600 hover:animate-pulse hover:bg-blue-600 cursor-pointer" href="https://drive.google.com/file/d/18sAXfT7eppe6WPYDznVJN-c4R42Ls9yh/view" target="_blank">Download CV</a>
                     <Link to="contact" smooth={true} duration={2000} > 
                      <a href="" className="px-5  transform duration-500 hover:scale-110 py-2 w-32 mx-5 border-2 hover:bg-white hover:text-black cursor-pointer rounded-full">Contact</a>
                     </Link>
