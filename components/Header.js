@@ -24,7 +24,7 @@ function Header({ data }) {
                         <Link to="resume" smooth={true} duration={1000} className="cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse">Resume</Link>
                         <Link to="skills" smooth={true} duration={1000} className="cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse">Skills</Link>
                         <Link to="works" smooth={true} duration={1000} className="cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse">Works</Link>
-                        <Link to="testimonial" smooth={true} duration={1000} className="cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse">Testimonial</Link>
+                        {/* <Link to="testimonial" smooth={true} duration={1000} className="cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse">Testimonial</Link> */}
                         <Link to="contact" smooth={true} duration={1000} className="cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse">Contact</Link>
                     </ul>
                 </motion.div>
@@ -41,7 +41,7 @@ function Header({ data }) {
                                 <Link onClick={() => setShow(false)} to="resume" smooth={true} duration={1000} className="px-5 py-2 cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse">Resume</Link>
                                 <Link onClick={() => setShow(false)} to="skills" smooth={true} duration={1000} className="px-5 py-2 cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse">Skills</Link>
                                 <Link onClick={() => setShow(false)} to="works" smooth={true} duration={1000} className="px-5 py-2 cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse">Works</Link>
-                                <Link onClick={() => setShow(false)} to="testimonial" smooth={true} duration={1000} className="px-5 py-2 cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse">Testimonial</Link>
+                                {/* <Link onClick={() => setShow(false)} to="testimonial" smooth={true} duration={1000} className="px-5 py-2 cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse">Testimonial</Link> */}
                                 <Link onClick={() => setShow(false)} to="contact" smooth={true} duration={1000} className="px-5 py-2 cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse">Contact</Link>
                             </ul>
                         </motion.div>
