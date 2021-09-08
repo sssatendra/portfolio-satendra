@@ -98,6 +98,11 @@
         "image": "/Next.png"
         },
         {
+          "name": "Redux",
+          "level": "50%",
+          "image": "/redux.png"
+        },
+        {
           "name": "Tailwind CSS",
           "level": "70%",
           "image": "/tailwind.png"
