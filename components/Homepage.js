@@ -6,7 +6,7 @@ function Homepage({ data }) {
     return (
         <div className="flex justify-evenly items-center flex-col md:flex-row my-16 pb-10">
             <motion.div initial={{ x: -50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 2.5, duration: 0.5 }} className="mx-16 w-2/4 lg:mt-1 lg:w-80">
-                <img src="https://satendra-portfolio-28383.web.app/images/ProfilePic.jpeg" className="hover:scale-105 transition transform duration-500 shadow-2xl rounded-full border-8 border-gray-800 " />
+                <img src="/ProfilePic.jpeg" className="hover:scale-105 transition transform duration-500 shadow-2xl rounded-full border-8 border-gray-800 " />
             </motion.div>
             <motion.div initial={{ x: 50, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 2.5, duration: 0.5 }} className="text-white md:w-2/4 space-y-3 p-5 text-center lg:text-left break-words flex-grow">
                 <p className="text-gray-400">{data.main.occupation}</p>

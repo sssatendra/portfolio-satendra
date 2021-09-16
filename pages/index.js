@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5813623957990251"
-     crossorigin="anonymous"></script>
+          crossorigin="anonymous"></script>
       </Head>
       <LazyMotion features={domAnimation}>
         <main id="home" className="bg-blue-500 m-0 p-0 box-border flex justify-center align-center font-sans">
