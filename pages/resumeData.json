@@ -136,6 +136,12 @@
         "url": "https://airbnb-clone-phi-five.vercel.app/"
       },
       {
+        "title": "Google Meet Clone with OAuth2",
+        "category": "NextJS Application",
+        "image": "/gmeets.jpg",
+        "url": "https://google-meet.vercel.app/"
+      },
+      {
         "title": "Flipkart Clone (MERN App)",
         "category": "React Application",
         "image": "/flipkart.jpg",
@@ -161,7 +167,7 @@
       },
 	  
       {
-        "title": "Disney+ Hotstar",
+        "title": "Disney+ Hotstar Clone",
         "category": "NextJS Application",
         "image": "/Hotstar.jpg",
         "url": "https://hotstar-clone-nine.vercel.app/"
@@ -171,13 +177,8 @@
         "category": "MERN Application",
         "image": "/Vocab.jpg",
         "url": "https://vocabulary-app-ad78d.web.app/"
-      },
-      {
-        "title": "Weather App (ReactJS)",
-        "category": "React Application",
-        "image": "/Weather.jpg",
-        "url": "https://weather-app-1290d.web.app/"
       }
+      
     ]
   },
   "testimonials": {
