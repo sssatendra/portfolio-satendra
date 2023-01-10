@@ -3,7 +3,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { useState } from 'react';
 
-function Header({ data }) {
+const headerLinks = ['home', 'resume', 'skills', 'works', 'contact'];
+
+function Header({ data, active, setActive }) {
   const [show, setShow] = useState(false);
 
   const handleClick = () => {
@@ -36,15 +38,20 @@ function Header({ data }) {
           className="hidden lg:inline-flex mr-16"
         >
           <ul className="flex justify-center items-center space-x-10 text-white font-semibold p-4 ">
-            <Link
-              to="home"
-              smooth={true}
-              duration={1000}
-              className="cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse"
-            >
-              Home
-            </Link>
-            <Link
+            {headerLinks.map((data) => (
+              <Link
+                to={data}
+                smooth={true}
+                duration={1000}
+                className="cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse"
+                onClick={() => setActive(data)}
+                style={active === data ? { color: 'red' } : {}}
+                onSetActive={(data) => console.log(data)}
+              >
+                {data.toUpperCase()}
+              </Link>
+            ))}
+            {/* <Link
               to="resume"
               smooth={true}
               duration={1000}
@@ -67,16 +74,16 @@ function Header({ data }) {
               className="cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse"
             >
               Works
-            </Link>
+            </Link> */}
             {/* <Link to="testimonial" smooth={true} duration={1000} className="cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse">Testimonial</Link> */}
-            <Link
+            {/* <Link
               to="contact"
               smooth={true}
               duration={1000}
               className="cursor-pointer hover:scale-105 transition duration-300 hover:text-red-600 hover:animate-pulse"
             >
               Contact
-            </Link>
+            </Link> */}
           </ul>
         </motion.div>
         <div className="lg:hidden">

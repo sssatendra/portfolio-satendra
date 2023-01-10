@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll';
 
-function Footer({ data }) {
+function Footer({ data, setActive }) {
   var networks = data.main.social.map(function (network) {
     return (
       <li
@@ -19,6 +19,7 @@ function Footer({ data }) {
         to="home"
         smooth={true}
         duration={1000}
+        onClick={() => setActive('home')}
         className=" cursor-pointer px-5 py-4 animate-bounce bg-gray-800 rounded-full transition duration-300 hover:bg-blue-600 hover:text-red-400"
       >
         <i class="fa fa-arrow-up animate-bounce fa-x"></i>
