@@ -2,15 +2,15 @@
   "main": {
     "name": "Satendra Kumar R",
     "initial": "S",
-    "occupation": "Full Stack Developer",
+    "occupation": "Full Stack MERN Developer",
     "description": "Proficient in translating designs & wireframes into high-quality code, and writing application interface code via Javascript and ReactJS workflows. Adept at monitoring & maintaining frontend performance and troubleshooting & debugging the same to bolster overall performance.",
     "image": "ProfilePic.jpeg",
     "bio": "Hi there! I am Satendra! I'm currently 27 years old, Working as React Developer (SDE1) at Analogyx BI Private Limited. I have experience upgrading ERP application with new features as per Users and Business requirments.",
     "contactmessage": "Get in touch with me!",
     "email": "sssatendra51@gmail.com",
-    "phone": "+91 8553109910",
+    "phone": "+91 85XXXXX10",
     "address": {
-      "street": "3rd 'C' Cross chamundinagar",
+      "street": "###################################",
       "city": "Bengaluru",
       "state": "Karnataka",
       "zip": "560032"
