@@ -3,9 +3,9 @@
     "name": "Satendra Kumar",
     "initial": "S",
     "occupation": "Senior Full-Stack Software Engineer",
-    "description": "Senior Software Engineer with 4.5+ years of experience specializing in high-performance BI tools, algorithmic trading systems, and real-time collaboration platforms.",
+    "description": "Senior Software Engineer with 4.5+ years of experience specializing in enterprise SaaS architecture, high-performance BI tools, and complex multi-tenant platforms across FinTech, HealthTech, and HR Tech.",
     "image": "ProfilePic.jpeg",
-    "bio": "I am a Senior Software Engineer focused on architecting and scaling complex data-driven applications. From optimizing grid calculations to achieve a 96% latency reduction to building real-time collaboration tools and automated delta-neutral trading engines, I thrive on solving high-impact technical challenges.",
+    "bio": "I am a Senior Software Engineer focused on architecting and scaling complex data-driven applications. With a proven track record of building production-grade HRMS, POS, and Hospital Management systems from scratch, I specialize in multi-tenant architectures, real-time communications, and extreme performance optimizations—like reducing BI report latency by 96%.",
     "contactmessage": "Let's build something extraordinary together!",
     "email": "sssatendra51@gmail.com",
     "phone": "+91 85XXXXX10",
@@ -110,6 +110,16 @@
         "name": "BI Tools (Apache Superset)",
         "level": "90%",
         "image": "/WebDev.png"
+      },
+      {
+        "name": "NestJS / Node.js",
+        "level": "90%",
+        "image": "/Node.png"
+      },
+      {
+        "name": "Mobile Dev (React Native/Expo)",
+        "level": "85%",
+        "image": "/React.png"
       }
     ]
   },
@@ -142,6 +152,55 @@
         "image": "/images/mobile-app.png",
         "url": "#",
         "description": "Cross-platform mobile application for enterprise resource management built with Expo and React Native."
+      },
+      {
+        "title": "Modern HRMS Platform",
+        "category": "SaaS / HR Tech",
+        "image": "/images/hrms.png",
+        "url": "https://github.com/sssatendra/hrms-platform",
+        "description": "Enterprise-grade multi-tenant HRMS with India payroll compliance, LMS with video transcoding, and real-time attendance geofencing."
+      },
+      {
+        "title": "SmartBill (Finansync)",
+        "category": "Fintech / POS",
+        "image": "/images/smartbill.png",
+        "url": "https://github.com/sssatendra/smartbill",
+        "description": "Comprehensive GST billing, inventory, and POS ecosystem for Indian SMEs, including web, mobile (Expo), and desktop (Electron) apps."
+      },
+      {
+        "title": "Hospital Management System (HMS)",
+        "category": "Healthcare / EMR",
+        "image": "/images/hms.png",
+        "url": "#",
+        "description": "Production-grade HMS with integrated Pharmacy, Laboratory (LIS), and Electronic Medical Records (EMR) using a hybrid SQL/NoSQL architecture."
+      },
+      {
+        "title": "LocalKart",
+        "category": "Hyperlocal Commerce",
+        "image": "/images/localkart.png",
+        "url": "https://github.com/sssatendra/localkart",
+        "description": "Hyperlocal marketplace SaaS featuring PostGIS-powered geospatial search, real-time order tracking, and a zero-config catalog for shop owners."
+      },
+      {
+        "title": "Event Management System (EMS)",
+        "category": "Event Tech",
+        "image": "/images/ems.png",
+        "url": "https://github.com/sssatendra/ems",
+        "description": "Full-stack event platform with automated QR check-ins, WhatsApp integration, and multi-level venue/employee management."
+      },
+      {
+        "title": "Unified Commerce OS (CMOS)",
+        "category": "E-commerce Management",
+        "image": "/images/cmos.png",
+        "url": "https://github.com/sssatendra/cmos",
+        "description": "All-in-one management SaaS for multi-channel sellers (Amazon, Shopify, Flipkart) with automated GST filing and P&L analytics."
+      },
+      {
+        "title": "Freelancer Business OS",
+        "category": "SaaS / Productivity",
+        "image": "/images/freelancer-os.png",
+        "url": "https://github.com/sssatendra/freelancer-os",
+        "description": "Comprehensive OS for freelancers featuring multi-gateway payments (Stripe/Razorpay), automated GST invoicing, and AI-powered client reliability scoring."
       }
     ]
   }
