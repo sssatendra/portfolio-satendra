@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { TrendingDown, Zap, BarChart3, Smartphone, ExternalLink } from 'lucide-react';
+import { TrendingDown, Zap, MessageSquare, Smartphone, ExternalLink } from 'lucide-react';
 
 const achievements = [
   {
@@ -13,18 +13,18 @@ const achievements = [
     gradient: 'from-yellow-500/10 to-transparent'
   },
   {
-    title: 'Quant Engine',
-    subtitle: 'FinTech',
-    description: 'Automated options trading platform with Python/Flask.',
+    title: 'Delta Neutral Engine',
+    subtitle: 'Quant Trading',
+    description: 'Automated options strategy platform with dynamic config & Greeks management.',
     icon: <TrendingDown className="w-5 h-5 text-green-400" />,
     className: 'md:col-span-1 md:row-span-1',
     gradient: 'from-green-500/10 to-transparent'
   },
   {
-    title: 'BI Expert',
-    subtitle: 'Data Analytics',
-    description: 'Enterprise Apache Superset customization & insights.',
-    icon: <BarChart3 className="w-5 h-5 text-blue-400" />,
+    title: 'Real-time Chat',
+    subtitle: 'WebSockets',
+    description: 'Built a collaborative BI chat app for real-time dashboard sharing and conversations.',
+    icon: <MessageSquare className="w-5 h-5 text-blue-400" />,
     className: 'md:col-span-1 md:row-span-1',
     gradient: 'from-blue-500/10 to-transparent'
   },

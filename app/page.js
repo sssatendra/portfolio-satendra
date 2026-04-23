@@ -5,16 +5,16 @@ import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import BentoGrid from '../components/BentoGrid';
 import resumeData from '../pages/resumeData.json';
-import { 
-  Github, 
-  Linkedin, 
-  Twitter, 
-  ExternalLink, 
-  Mail, 
-  ArrowRight, 
-  Code2, 
-  Briefcase, 
-  GraduationCap, 
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  ExternalLink,
+  Mail,
+  ArrowRight,
+  Code2,
+  Briefcase,
+  GraduationCap,
   User,
   Send,
   Cpu,
@@ -44,11 +44,11 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Background3D />
-      
+
       {/* Refined Navigation Header */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 px-6 ${scrolled ? 'py-4 glass border-b border-white/10 shadow-2xl' : 'py-8'}`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-2 cursor-pointer group"
@@ -61,7 +61,7 @@ export default function Home() {
               Satendra<span className="text-blue-500">.</span>
             </span>
           </motion.div>
-          
+
           <div className="flex items-center gap-10">
             <div className="hidden md:flex items-center gap-8 text-[13px] font-bold uppercase tracking-[0.1em] text-gray-400">
               <a href="#about" className="hover:text-white transition-colors relative group">
@@ -81,9 +81,9 @@ export default function Home() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
               </a>
             </div>
-            
-            <a 
-              href="#contact" 
+
+            <a
+              href="#contact"
               className="px-6 py-2.5 bg-white text-black rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-500 hover:text-white transition-all transform hover:scale-105 active:scale-95 shadow-xl"
             >
               Contact Me
@@ -101,14 +101,14 @@ export default function Home() {
             className="relative mb-8"
           >
             <div className="absolute inset-0 bg-blue-500 blur-3xl opacity-20 -z-10 rounded-full"></div>
-            <img 
-              src={main.image} 
+            <img
+              src={main.image}
               alt={main.name}
               className="w-40 h-40 rounded-full border-2 border-white/10 p-2 glass shadow-2xl object-cover"
             />
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-6xl md:text-8xl font-bold mb-6 tracking-tighter text-gradient px-4"
@@ -116,7 +116,7 @@ export default function Home() {
             {main.name}
           </motion.h1>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -176,13 +176,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <SkillCard title="Frontend" icon={<Globe className="w-5 h-5" />} skills={["React", "Next.js", "TypeScript", "Tailwind"]} />
             <SkillCard title="Backend" icon={<Cpu className="w-5 h-5" />} skills={["Python", "Flask", "Distributed Systems", "Celery"]} />
-            <SkillCard title="Infrastructure" icon={<Layers className="w-5 h-5" />} skills={["Docker", "Kubernetes", "Redis", "Message Queues"]} />
+            <SkillCard title="Infrastructure" icon={<Layers className="w-5 h-5" />} skills={["Docker", "Redis", "Message Queues"]} />
             <SkillCard title="Data" icon={<Database className="w-5 h-5" />} skills={["PostgreSQL", "MongoDB", "Apache Superset", "BI Optimization"]} />
           </div>
-          
+
           <div className="mt-12 flex flex-wrap justify-center gap-4">
             {resume.skills.map((skill, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center gap-3 glass px-5 py-3 rounded-2xl border border-white/5"
@@ -202,7 +202,7 @@ export default function Home() {
             Professional Journey
           </div>
           <h2 className="text-5xl font-bold mb-16 tracking-tight">Work Experience</h2>
-          
+
           <div className="relative border-l-2 border-white/5 ml-4 md:ml-6 space-y-16">
             {resume.work.map((job, i) => (
               <ExperienceStepperItem key={i} job={job} index={i} />
@@ -228,7 +228,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {portfolio.projects.map((project, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -237,8 +237,8 @@ export default function Home() {
                 className="group relative rounded-[2.5rem] overflow-hidden glass hover:border-blue-500/50 transition-all cursor-pointer border border-white/5 shadow-2xl"
               >
                 <div className="aspect-video relative overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="object-cover w-full h-full transform scale-105 group-hover:scale-110 transition-transform duration-700 brightness-75 group-hover:brightness-100"
                   />
@@ -273,9 +273,9 @@ export default function Home() {
           <p className="text-xl text-gray-450 mb-16 max-w-2xl mx-auto font-light leading-relaxed px-4">
             Currently open to high-impact software roles and architectural consulting. If you have a challenge, I have a solution.
           </p>
-          
+
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-            <a 
+            <a
               href={`mailto:${main.email}`}
               className="flex items-center gap-3 px-10 py-5 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-all shadow-2xl shadow-blue-600/40 transform hover:-translate-y-1 active:translate-y-0"
             >
@@ -283,7 +283,7 @@ export default function Home() {
             </a>
             <div className="flex gap-4">
               {main.social.map((social, i) => (
-                <a 
+                <a
                   key={i}
                   href={social.url}
                   className="p-5 glass rounded-full hover:bg-white/10 transition-all border border-white/5 hover:border-white/20 active:scale-95"
@@ -297,7 +297,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          
+
           <div className="mt-20 p-10 glass rounded-[3rem] max-w-2xl mx-auto border border-white/5 shadow-2xl">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-left">
               <div>
@@ -326,11 +326,11 @@ export default function Home() {
               Senior Full-Stack Engineer
             </div>
           </div>
-          
+
           <div className="text-gray-500 text-xs font-medium uppercase tracking-[0.2em]">
             © 2026 {main.name}. Engineered for performance.
           </div>
-          
+
           <div className="flex gap-10 text-xs font-bold uppercase tracking-widest text-gray-500">
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href="#skills" className="hover:text-white transition-colors">Skills</a>
@@ -352,8 +352,8 @@ function ExperienceStepperItem({ job, index }) {
       <div className="absolute left-[-11px] top-0 w-6 h-6 rounded-full bg-[#050505] border-2 border-blue-500 flex items-center justify-center z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)]">
         <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
       </div>
-      
-      <motion.div 
+
+      <motion.div
         layout
         className="glass rounded-[2.5rem] p-8 md:p-12 border border-white/5 hover:border-blue-500/30 transition-all shadow-2xl relative group"
       >
@@ -370,7 +370,7 @@ function ExperienceStepperItem({ job, index }) {
             <Briefcase className="w-6 h-6 text-gray-400" />
           </div>
         </div>
-        
+
         <p className="text-gray-400 text-lg leading-relaxed max-w-3xl mb-10 font-light italic">
           {job.description}
         </p>
@@ -385,7 +385,7 @@ function ExperienceStepperItem({ job, index }) {
             >
               <ul className="space-y-8 mb-10 border-l border-white/10 pl-8 ml-2">
                 {job.highlights.map((point, i) => (
-                  <motion.li 
+                  <motion.li
                     key={i}
                     initial={{ x: -20, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
@@ -401,7 +401,7 @@ function ExperienceStepperItem({ job, index }) {
           )}
         </AnimatePresence>
 
-        <button 
+        <button
           onClick={() => setIsExpanded(!isExpanded)}
           className="flex items-center gap-4 text-blue-400 font-bold hover:text-blue-300 transition-all text-xs uppercase tracking-[0.3em] group/btn"
         >

@@ -3,12 +3,12 @@
     "name": "Satendra Kumar",
     "initial": "S",
     "occupation": "Senior Full-Stack Software Engineer",
-    "description": "Senior Software Engineer with 4.5+ years of experience specializing in high-performance BI tools, algorithmic trading systems, and enterprise mobile applications. Expert in React, Python (Flask), and distributed systems.",
+    "description": "Senior Software Engineer with 4.5+ years of experience specializing in high-performance BI tools, algorithmic trading systems, and real-time collaboration platforms.",
     "image": "ProfilePic.jpeg",
-    "bio": "I am a Senior Software Engineer focused on architecting and scaling complex data-driven applications. From optimizing grid calculations to achieve a 96% latency reduction to building automated trading engines, I thrive on solving high-impact technical challenges.",
+    "bio": "I am a Senior Software Engineer focused on architecting and scaling complex data-driven applications. From optimizing grid calculations to achieve a 96% latency reduction to building real-time collaboration tools and automated delta-neutral trading engines, I thrive on solving high-impact technical challenges.",
     "contactmessage": "Let's build something extraordinary together!",
     "email": "sssatendra51@gmail.com",
-    "phone": "+91 8660033152",
+    "phone": "+91 85XXXXX10",
     "address": {
       "city": "Bengaluru",
       "state": "Karnataka",
@@ -48,13 +48,13 @@
         "company": "Analogyx BI Pvt Ltd",
         "title": "Senior Full-Stack Software Engineer",
         "years": "Sept 2021 - Feb 2026",
-        "description": "Lead developer for enterprise BI solutions and high-performance system architecture.",
+        "description": "Lead developer for enterprise BI solutions and high-frequency trading architecture.",
         "highlights": [
+          "Developed a specialized Delta Trading platform for options contracts, featuring dynamic strategy configurations and automated risk-management parameters.",
+          "Architected and implemented a custom real-time Chat Application using WebSockets, integrated directly into the BI platform.",
           "Optimized Luckysheet core calculation engine, reducing report generation latency by 96% (from 40 minutes to 90 seconds).",
           "Engineered a comprehensive automated options trading engine using Python, Flask, Celery, and Redis, integrating with kite-connect API.",
-          "Directed the end-to-end customization of Apache Superset for enterprise-grade dashboards and secure data visualization.",
-          "Architected scalable microservices and designed complex frontend components using React and Next.js.",
-          "Lead cross-functional teams of developers to ship high-impact features for global BI clients."
+          "Directed the end-to-end customization of Apache Superset for enterprise-grade dashboards."
         ]
       },
       {
@@ -82,9 +82,14 @@
         "image": "/Python.png"
       },
       {
-        "name": "JavaScript / TypeScript",
-        "level": "95%",
-        "image": "/JavaScript.png"
+        "name": "WebSockets / Real-time",
+        "level": "90%",
+        "image": "/Node.png"
+      },
+      {
+        "name": "Algorithmic Trading",
+        "level": "85%",
+        "image": "/Python.png"
       },
       {
         "name": "Distributed Systems (Celery/Redis)",
@@ -102,11 +107,6 @@
         "image": "/Git.png"
       },
       {
-        "name": "Mobile Dev (Expo/React Native)",
-        "level": "85%",
-        "image": "/Next.png"
-      },
-      {
         "name": "BI Tools (Apache Superset)",
         "level": "90%",
         "image": "/WebDev.png"
@@ -116,11 +116,18 @@
   "portfolio": {
     "projects": [
       {
-        "title": "Automated Options Trading Platform",
-        "category": "Quant / FinTech",
+        "title": "Delta Neutral Options Engine",
+        "category": "Quant / Algorithmic Trading",
         "image": "/images/trading.png",
         "url": "https://github.com/sssatendra/trading-engine",
-        "description": "A high-precision trading engine built with Python, Flask, kite-connect API, Celery, and Redis for automated options trading."
+        "description": "A sophisticated trading platform for Delta-neutral options strategies, featuring automated Greeks management and dynamic configuration files."
+      },
+      {
+        "title": "Real-time BI Collaboration Suite",
+        "category": "WebSockets / Full-Stack",
+        "image": "/images/bi-chat.png",
+        "url": "#",
+        "description": "A high-concurrency chat and collaboration application integrated into enterprise BI tools, allowing real-time data sharing and conversation."
       },
       {
         "title": "96% Latency Optimization (Luckysheet)",
@@ -135,13 +142,6 @@
         "image": "/images/mobile-app.png",
         "url": "#",
         "description": "Cross-platform mobile application for enterprise resource management built with Expo and React Native."
-      },
-      {
-        "title": "Custom Apache Superset Integration",
-        "category": "BI / Data Visualization",
-        "image": "/images/trading.png",
-        "url": "#",
-        "description": "Enterprise-level BI dashboard customization and security integration with Superset."
       }
     ]
   }
