@@ -8,7 +8,7 @@
     "bio": "I am a Senior Software Engineer focused on architecting and scaling complex data-driven applications. With a proven track record of building production-grade HRMS, POS, and Hospital Management systems from scratch, I specialize in multi-tenant architectures, real-time communications, and extreme performance optimizations—like reducing BI report latency by 96%.",
     "contactmessage": "Let's build something extraordinary together!",
     "email": "sssatendra51@gmail.com",
-    "phone": "+91 85XXXXX10",
+    "phone": "+91 8660033152",
     "address": {
       "city": "Bengaluru",
       "state": "Karnataka",
@@ -50,11 +50,12 @@
         "years": "Sept 2021 - Feb 2026",
         "description": "Lead developer for enterprise BI solutions and high-frequency trading architecture.",
         "highlights": [
-          "Developed a specialized Delta Trading platform for options contracts, featuring dynamic strategy configurations and automated risk-management parameters.",
-          "Architected and implemented a custom real-time Chat Application using WebSockets, integrated directly into the BI platform.",
+          "Architected end-to-end AWS infrastructure, provisioning production-grade EC2 instances with hardened security, custom Nginx reverse proxies, and automated SSL/TLS termination.",
+          "Engineered programmatic data pipelines using AWS S3 SDKs, streamlining secure object storage and retrieval for high-concurrency BI applications.",
+          "Orchestrated multi-tenant application deployments, co-hosting Streamlit suites, pgAdmin, and BI tools on optimized single-instance environments with isolated routing.",
+          "Managed the full DevOps lifecycle, from bare-metal machine configuration to secure web access deployment, ensuring high availability for production ecosystems.",
           "Optimized Luckysheet core calculation engine, reducing report generation latency by 96% (from 40 minutes to 90 seconds).",
-          "Engineered a comprehensive automated options trading engine using Python, Flask, Celery, and Redis, integrating with kite-connect API.",
-          "Directed the end-to-end customization of Apache Superset for enterprise-grade dashboards."
+          "Engineered a comprehensive automated options trading engine using Python, Flask, Celery, and Redis, integrating with kite-connect API."
         ]
       },
       {
@@ -120,6 +121,21 @@
         "name": "Mobile Dev (React Native/Expo)",
         "level": "85%",
         "image": "/React.png"
+      },
+      {
+        "name": "AWS Cloud (EC2, S3, IAM)",
+        "level": "95%",
+        "image": "/aws.png"
+      },
+      {
+        "name": "DevOps & Security (Nginx, SSL)",
+        "level": "90%",
+        "image": "/nginx.png"
+      },
+      {
+        "name": "Redux / Redux Toolkit",
+        "level": "95%",
+        "image": "/redux.png"
       }
     ]
   },
