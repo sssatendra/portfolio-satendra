@@ -15,6 +15,12 @@
       "country": "India"
     },
     "website": "satendra.dev",
+    "resumeUrl": "/resume_new.pdf",
+    "seo": {
+      "title": "Satendra Kumar | Senior Full-Stack Engineer & System Architect",
+      "description": "Portfolio of Satendra Kumar, a Senior Software Engineer specializing in Python/Flask, React.js, and high-performance distributed systems. Expert in BI platforms, Algorithmic Trading, and Enterprise SaaS.",
+      "keywords": "Senior Software Engineer, Full-Stack Developer, Python Flask Expert, React.js Developer, System Architect, Algorithmic Trading Systems, Enterprise BI, Bengaluru Developer"
+    },
     "social": [
       {
         "name": "linkedin",
@@ -48,14 +54,39 @@
         "company": "Analogyx BI Pvt Ltd",
         "title": "Senior Full-Stack Software Engineer",
         "years": "Sept 2021 - Feb 2026",
-        "description": "Lead developer for enterprise BI solutions and high-frequency trading architecture.",
-        "highlights": [
-          "Architected end-to-end AWS infrastructure, provisioning production-grade EC2 instances with hardened security, custom Nginx reverse proxies, and automated SSL/TLS termination.",
-          "Engineered programmatic data pipelines using AWS S3 SDKs, streamlining secure object storage and retrieval for high-concurrency BI applications.",
-          "Orchestrated multi-tenant application deployments, co-hosting Streamlit suites, pgAdmin, and BI tools on optimized single-instance environments with isolated routing.",
-          "Managed the full DevOps lifecycle, from bare-metal machine configuration to secure web access deployment, ensuring high availability for production ecosystems.",
-          "Optimized Luckysheet core calculation engine, reducing report generation latency by 96% (from 40 minutes to 90 seconds).",
-          "Engineered a comprehensive automated options trading engine using Python, Flask, Celery, and Redis, integrating with kite-connect API."
+        "description": "Leading architectural design and full-stack development for enterprise-grade BI, Fintech, and ERP solutions.",
+        "projects": [
+          {
+            "name": "Enterprise BI & Analytics Platform",
+            "highlights": [
+              "Architected scalable backend analytics services using Python (Flask) and PostgreSQL, integrated with Apache Superset.",
+              "Drove performance initiatives reducing data processing latency by 96% (40 mins to 90 secs) for financial recalculation pipelines.",
+              "Engineered complex React.js visualization modules including pivot reporting and interactive Gantt charts."
+            ]
+          },
+          {
+            "name": "Automated Options Trading Engine",
+            "highlights": [
+              "Owned end-to-end system design for production-grade algorithmic trading leveraging Flask, Celery, and Redis.",
+              "Engineered high-frequency WebSocket microservices for real-time market tick ingestion.",
+              "Designed robust order workflows with distributed stop-loss monitoring to eliminate execution slippage."
+            ]
+          },
+          {
+            "name": "ERP Warehouse Mobile Suite",
+            "highlights": [
+              "Spearheaded React Native warehouse applications with barcode-driven workflows and Epicor ERP integration.",
+              "Facilitated real-time synchronization of inventory count cycles and PO receipts via RESTful APIs.",
+              "Improved data accuracy and stock tracking efficiency across distributed warehouse environments."
+            ]
+          },
+          {
+            "name": "DevOps & Infrastructure",
+            "highlights": [
+              "Orchestrated multi-tenant AWS deployments (EC2, S3, Nginx) ensuring 99.9% availability.",
+              "Provisioned production-grade instances with hardened security and automated SSL/TLS termination."
+            ]
+          }
         ]
       },
       {
@@ -142,82 +173,67 @@
   "portfolio": {
     "projects": [
       {
-        "title": "Delta Neutral Options Engine",
-        "category": "Quant / Algorithmic Trading",
-        "image": "/images/trading.png",
-        "url": "https://github.com/sssatendra/trading-engine",
-        "description": "A sophisticated trading platform for Delta-neutral options strategies, featuring automated Greeks management and dynamic configuration files."
-      },
-      {
-        "title": "Real-time BI Collaboration Suite",
-        "category": "WebSockets / Full-Stack",
-        "image": "/images/bi-chat.png",
-        "url": "#",
-        "description": "A high-concurrency chat and collaboration application integrated into enterprise BI tools, allowing real-time data sharing and conversation."
-      },
-      {
-        "title": "96% Latency Optimization (Luckysheet)",
-        "category": "Systems Optimization",
+        "title": "Enterprise BI & Analytics Platform",
+        "category": "Enterprise / Data Engineering",
         "image": "/images/optimization.png",
         "url": "#",
-        "description": "Refactored core calculation engines to reduce BI report latency from 40 minutes to under 90 seconds."
+        "description": "A high-performance BI suite architected for real-time reporting and complex data visualizations.",
+        "features": [
+          "96% Latency Reduction: Optimized financial recalculation pipelines from 40 minutes to under 90 seconds.",
+          "Custom Visualization: Engineered pivot reporting, interactive Gantt charts, and spreadsheet-style modules in React.",
+          "Seamless Integration: Built Python/Flask backend services integrated with Apache Superset for enterprise workflows."
+        ]
       },
       {
-        "title": "Enterprise Business Mobile App",
-        "category": "Mobile Application",
+        "title": "Automated Options Trading Engine",
+        "category": "FinTech / Distributed Systems",
+        "image": "/images/trading.png",
+        "url": "https://github.com/sssatendra/trading-engine",
+        "description": "Production-grade algorithmic trading platform handling high-frequency market data and automated execution.",
+        "features": [
+          "Real-time Tick Ingestion: High-frequency WebSocket microservices for low-latency market data streaming.",
+          "Reliable Task Execution: Leveraged Celery and Redis for distributed risk management and multi-leg order workflows.",
+          "Automated Risk Control: Integrated stop-loss monitoring to eliminate slippage during high market volatility."
+        ]
+      },
+      {
+        "title": "ERP Warehouse Mobile Suite",
+        "category": "Mobile / Logistics",
         "image": "/images/mobile-app.png",
         "url": "#",
-        "description": "Cross-platform mobile application for enterprise resource management built with Expo and React Native."
+        "description": "Modern logistics solution streamlining warehouse operations with real-time ERP synchronization.",
+        "features": [
+          "ERP Integration: Direct synchronization with Epicor ERP RESTful APIs for inventory and PO management.",
+          "Barcode Workflows: Optimized device-driven scanning workflows for high-accuracy stock tracking.",
+          "Cross-Platform Efficiency: Built with React Native and Expo to modernize supply chain logistics."
+        ]
       },
       {
         "title": "Modern HRMS Platform",
         "category": "SaaS / HR Tech",
         "image": "/images/hrms.png",
         "url": "https://github.com/sssatendra/hrms-platform",
-        "description": "Enterprise-grade multi-tenant HRMS with India payroll compliance, LMS with video transcoding, and real-time attendance geofencing."
+        "description": "Enterprise-grade multi-tenant HRMS with India payroll compliance and LMS.",
+        "features": [
+          "Payroll Compliance: Automated Indian statutory compliance and payroll processing.",
+          "LMS & Video: Integrated Learning Management System with automated video transcoding.",
+          "Real-time Attendance: Geofencing-powered mobile attendance tracking."
+        ]
       },
       {
         "title": "SmartBill (Finansync)",
         "category": "Fintech / POS",
         "image": "/images/smartbill.png",
         "url": "https://github.com/sssatendra/smartbill",
-        "description": "Comprehensive GST billing, inventory, and POS ecosystem for Indian SMEs, including web, mobile (Expo), and desktop (Electron) apps."
-      },
-      {
-        "title": "Hospital Management System (HMS)",
-        "category": "Healthcare / EMR",
-        "image": "/images/hms.png",
-        "url": "#",
-        "description": "Production-grade HMS with integrated Pharmacy, Laboratory (LIS), and Electronic Medical Records (EMR) using a hybrid SQL/NoSQL architecture."
-      },
-      {
-        "title": "LocalKart",
-        "category": "Hyperlocal Commerce",
-        "image": "/images/localkart.png",
-        "url": "https://github.com/sssatendra/localkart",
-        "description": "Hyperlocal marketplace SaaS featuring PostGIS-powered geospatial search, real-time order tracking, and a zero-config catalog for shop owners."
-      },
-      {
-        "title": "Event Management System (EMS)",
-        "category": "Event Tech",
-        "image": "/images/ems.png",
-        "url": "https://github.com/sssatendra/ems",
-        "description": "Full-stack event platform with automated QR check-ins, WhatsApp integration, and multi-level venue/employee management."
-      },
-      {
-        "title": "Unified Commerce OS (CMOS)",
-        "category": "E-commerce Management",
-        "image": "/images/cmos.png",
-        "url": "https://github.com/sssatendra/cmos",
-        "description": "All-in-one management SaaS for multi-channel sellers (Amazon, Shopify, Flipkart) with automated GST filing and P&L analytics."
-      },
-      {
-        "title": "Freelancer Business OS",
-        "category": "SaaS / Productivity",
-        "image": "/images/freelancer-os.png",
-        "url": "https://github.com/sssatendra/freelancer-os",
-        "description": "Comprehensive OS for freelancers featuring multi-gateway payments (Stripe/Razorpay), automated GST invoicing, and AI-powered client reliability scoring."
+        "description": "Comprehensive GST billing and inventory ecosystem for Indian SMEs.",
+        "features": [
+          "Omni-channel: Unified experience across Web, Mobile (Expo), and Desktop (Electron).",
+          "GST Compliance: Automated tax calculation and invoicing for Indian businesses.",
+          "Inventory Management: Real-time stock tracking with automated reorder alerts."
+        ]
       }
     ]
   }
+}
+
 }

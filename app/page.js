@@ -62,8 +62,8 @@ export default function Home() {
             </span>
           </motion.div>
 
-          <div className="flex items-center gap-10">
-            <div className="hidden md:flex items-center gap-8 text-[13px] font-bold uppercase tracking-[0.1em] text-gray-400">
+            <div className="flex items-center gap-10">
+            <div className="hidden lg:flex items-center gap-8 text-[13px] font-bold uppercase tracking-[0.1em] text-gray-400">
               <a href="#about" className="hover:text-white transition-colors relative group">
                 About
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
@@ -82,12 +82,21 @@ export default function Home() {
               </a>
             </div>
 
-            <a
-              href="#contact"
-              className="px-6 py-2.5 bg-white text-black rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-500 hover:text-white transition-all transform hover:scale-105 active:scale-95 shadow-xl"
-            >
-              Contact Me
-            </a>
+            <div className="flex items-center gap-4">
+              <a
+                href={main.resumeUrl}
+                download
+                className="hidden sm:flex items-center gap-2 px-5 py-2.5 border border-white/10 hover:border-blue-500/50 rounded-full text-xs font-bold uppercase tracking-widest transition-all glass hover:text-blue-400"
+              >
+                Resume
+              </a>
+              <a
+                href="#contact"
+                className="px-6 py-2.5 bg-white text-black rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-500 hover:text-white transition-all transform hover:scale-105 active:scale-95 shadow-xl"
+              >
+                Contact
+              </a>
+            </div>
           </div>
         </div>
       </nav>
@@ -124,11 +133,30 @@ export default function Home() {
           >
             Senior <span className="text-white font-medium">Full-Stack</span> Software Engineer specializing in <span className="text-white font-medium">high-performance systems</span> and <span className="text-white font-medium">distributed architectures</span>.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex flex-col sm:flex-row gap-6"
+          >
+            <a
+              href="#projects"
+              className="px-10 py-4 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-all shadow-2xl shadow-blue-600/40 transform hover:-translate-y-1"
+            >
+              View My Work
+            </a>
+            <a
+              href={main.resumeUrl}
+              download
+              className="px-10 py-4 glass border border-white/10 text-white rounded-full font-bold hover:bg-white/5 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
+            >
+              Download CV <ArrowRight className="w-4 h-4 rotate-90" />
+            </a>
+          </motion.div>
         </div>
       </section>
 
-      {/* ... (rest of the sections remain same or updated similarly for polish) */}
-      {/* Keep the sections I updated previously */}
       {/* About Section */}
       <section id="about" className="py-24 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -226,7 +254,7 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {portfolio.projects.map((project, i) => (
               <motion.div
                 key={i}
@@ -234,7 +262,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative rounded-[2.5rem] overflow-hidden glass hover:border-blue-500/50 transition-all cursor-pointer border border-white/5 shadow-2xl"
+                className="group relative rounded-[2.5rem] overflow-hidden glass hover:border-blue-500/50 transition-all cursor-pointer border border-white/5 shadow-2xl flex flex-col"
               >
                 <div className="aspect-video relative overflow-hidden">
                   <img
@@ -248,14 +276,25 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-                <div className="p-8">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold group-hover:text-blue-400 transition-colors tracking-tight">{project.title}</h3>
+                <div className="p-10 flex-grow flex flex-col">
+                  <div className="flex justify-between items-start mb-6">
+                    <h3 className="text-3xl font-bold group-hover:text-blue-400 transition-colors tracking-tight">{project.title}</h3>
                     <ExternalLink className="w-5 h-5 text-gray-500" />
                   </div>
-                  <p className="text-gray-400 leading-relaxed mb-6 font-light">
+                  <p className="text-gray-400 text-lg leading-relaxed mb-8 font-light italic">
                     {project.description}
                   </p>
+                  
+                  {project.features && (
+                    <ul className="space-y-4 mt-auto">
+                      {project.features.map((feature, idx) => (
+                        <li key={idx} className="flex gap-3 text-sm text-gray-300">
+                          <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0 shadow-[0_0_8px_rgba(59,130,246,0.5)]"></div>
+                          <span className="font-light">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -335,7 +374,7 @@ export default function Home() {
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href="#skills" className="hover:text-white transition-colors">Skills</a>
             <a href="#projects" className="hover:text-white transition-colors">Projects</a>
-            <a href="#experience" className="hover:text-white transition-colors">Career</a>
+            <a href={main.resumeUrl} download className="text-blue-500 hover:text-blue-400 transition-colors">Resume</a>
           </div>
         </div>
       </footer>
@@ -383,20 +422,54 @@ function ExperienceStepperItem({ job, index }) {
               exit={{ height: 0, opacity: 0 }}
               className="overflow-hidden"
             >
-              <ul className="space-y-8 mb-10 border-l border-white/10 pl-8 ml-2">
-                {job.highlights.map((point, i) => (
-                  <motion.li
-                    key={i}
-                    initial={{ x: -20, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ delay: i * 0.05 }}
-                    className="flex gap-5 text-gray-300 group/item"
-                  >
-                    <div className="mt-2.5 w-2 h-2 rounded-full bg-blue-500 shrink-0 group-hover/item:scale-150 transition-transform shadow-[0_0_10px_rgba(59,130,246,0.6)]"></div>
-                    <span className="text-base md:text-xl leading-relaxed font-light">{point}</span>
-                  </motion.li>
-                ))}
-              </ul>
+              {job.projects ? (
+                <div className="space-y-10 mb-6">
+                  {job.projects.map((project, pi) => (
+                    <div key={pi} className="relative group/project">
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="relative flex items-center justify-center">
+                          <div className="w-4 h-4 rounded-full bg-blue-500/20 border border-blue-500/50 z-10"></div>
+                          <div className="absolute w-2 h-2 rounded-full bg-blue-500 z-20 shadow-[0_0_10px_rgba(59,130,246,0.8)] group-hover/project:scale-125 transition-transform"></div>
+                        </div>
+                        <h5 className="text-xl md:text-2xl font-bold text-white tracking-tight flex items-center gap-4 flex-1">
+                          {project.name}
+                          <span className="h-px flex-1 bg-gradient-to-r from-blue-500/30 to-transparent"></span>
+                        </h5>
+                      </div>
+                      
+                      <div className="pl-9 space-y-5 border-l border-white/5 ml-2">
+                        {project.highlights.map((point, i) => (
+                          <motion.div
+                            key={i}
+                            initial={{ x: -10, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ delay: i * 0.05 }}
+                            className="flex gap-4 text-gray-400 group/item"
+                          >
+                            <div className="mt-2.5 w-1.5 h-1.5 rounded-full bg-white/20 shrink-0 group-hover/item:bg-blue-400 group-hover/item:scale-150 transition-all duration-300"></div>
+                            <p className="text-base md:text-lg leading-relaxed font-light group-hover/item:text-gray-200 transition-colors duration-300">{point}</p>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <ul className="space-y-8 mb-10 border-l border-white/10 pl-8 ml-2">
+                  {job.highlights.map((point, i) => (
+                    <motion.li
+                      key={i}
+                      initial={{ x: -20, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{ delay: i * 0.05 }}
+                      className="flex gap-5 text-gray-300 group/item"
+                    >
+                      <div className="mt-2.5 w-2 h-2 rounded-full bg-blue-500 shrink-0 group-hover/item:scale-150 transition-transform shadow-[0_0_10px_rgba(59,130,246,0.6)]"></div>
+                      <span className="text-base md:text-xl leading-relaxed font-light">{point}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              )}
             </motion.div>
           )}
         </AnimatePresence>

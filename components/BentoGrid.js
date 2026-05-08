@@ -6,32 +6,32 @@ import { TrendingDown, Zap, MessageSquare, Smartphone, ExternalLink } from 'luci
 const achievements = [
   {
     title: '96% Latency Reduction',
-    subtitle: 'Systems Architecture',
-    description: 'Optimized high-resource grid calculations from 40m to 90s using core engine refactoring.',
+    subtitle: 'Financial Engineering',
+    description: 'Refactored core BI calculation engines to reduce processing time from 40 minutes to 90 seconds.',
     icon: <Zap className="w-5 h-5 text-yellow-400" />,
     className: 'md:col-span-2 md:row-span-1',
     gradient: 'from-yellow-500/10 to-transparent'
   },
   {
-    title: 'Delta Neutral Engine',
-    subtitle: 'Quant Trading',
-    description: 'Automated options strategy platform with dynamic config & Greeks management.',
+    title: 'Algo Trading Engine',
+    subtitle: 'FinTech Architecture',
+    description: 'Owned the end-to-end design of a production-grade options trading platform with Kite API.',
     icon: <TrendingDown className="w-5 h-5 text-green-400" />,
     className: 'md:col-span-1 md:row-span-1',
     gradient: 'from-green-500/10 to-transparent'
   },
   {
-    title: 'Real-time Chat',
-    subtitle: 'WebSockets',
-    description: 'Built a collaborative BI chat app for real-time dashboard sharing and conversations.',
+    title: 'Real-time Analytics',
+    subtitle: 'Systems Design',
+    description: 'Architected scalable backend analytics using Python/Flask and Apache Superset integration.',
     icon: <MessageSquare className="w-5 h-5 text-blue-400" />,
     className: 'md:col-span-1 md:row-span-1',
     gradient: 'from-blue-500/10 to-transparent'
   },
   {
-    title: 'Enterprise Mobile',
-    subtitle: 'App Development',
-    description: 'Developing scalable business-critical apps with Expo and React Native.',
+    title: 'ERP Mobile Suite',
+    subtitle: 'Mobile Logistics',
+    description: 'Spearheaded React Native apps for warehouse logistics with barcode-driven Epicor ERP sync.',
     icon: <Smartphone className="w-5 h-5 text-purple-400" />,
     className: 'md:col-span-2 md:row-span-1',
     gradient: 'from-purple-500/10 to-transparent'
