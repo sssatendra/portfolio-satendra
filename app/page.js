@@ -6,7 +6,6 @@ import dynamic from 'next/dynamic';
 import BentoGrid from '../components/BentoGrid';
 import resumeData from '../pages/resumeData.json';
 import {
-  Github,
   Linkedin,
   Twitter,
   ExternalLink,
@@ -28,6 +27,8 @@ import {
   Calendar
 } from 'lucide-react';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import GitHubStats from '../components/GitHubStats';
+
 
 const Background3D = dynamic(() => import('../components/Background3D'), { ssr: false });
 
@@ -78,6 +79,10 @@ export default function Home() {
               </a>
               <a href="#experience" className="hover:text-white transition-colors relative group">
                 Experience
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+              </a>
+              <a href="#impact" className="hover:text-white transition-colors relative group">
+                Impact
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
               </a>
             </div>
@@ -239,6 +244,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* GitHub Section */}
+      <section id="impact">
+        <GitHubStats />
+      </section>
+
       {/* Projects Section */}
       <section id="projects" className="py-32 px-6 bg-white/[0.02]">
         <div className="max-w-7xl mx-auto">
@@ -373,6 +383,8 @@ export default function Home() {
           <div className="flex gap-10 text-xs font-bold uppercase tracking-widest text-gray-500">
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href="#skills" className="hover:text-white transition-colors">Skills</a>
+            <a href="#experience" className="hover:text-white transition-colors">Experience</a>
+            <a href="#impact" className="hover:text-white transition-colors">Impact</a>
             <a href="#projects" className="hover:text-white transition-colors">Projects</a>
             <a href={main.resumeUrl} download className="text-blue-500 hover:text-blue-400 transition-colors">Resume</a>
           </div>

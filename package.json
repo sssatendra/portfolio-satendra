@@ -12,6 +12,7 @@
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.0",
     "@tailwindcss/postcss": "^4.2.4",
+    "@tailwindcss/typography": "^0.5.19",
     "@types/three": "^0.184.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
@@ -21,6 +22,8 @@
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-icons": "^4.2.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
     "tailwind-merge": "^3.5.0",
     "three": "^0.184.0"
   },
