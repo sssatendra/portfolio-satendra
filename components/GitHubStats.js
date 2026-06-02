@@ -21,13 +21,13 @@ function RepoCard({ repo, index, onViewInfo }) {
       className="relative flex flex-col group h-full"
     >
       {/* Background Glow */}
-      <div className={`absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-[2.5rem] opacity-0 transition-opacity duration-500 ${isHovered ? 'opacity-20 blur-xl' : ''}`} />
+      <div className={`absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-[2rem] sm:rounded-[2.5rem] opacity-0 transition-opacity duration-500 ${isHovered ? 'opacity-20 blur-xl' : ''}`} />
       
-      <div className={`relative flex flex-col h-full glass rounded-[2.5rem] border border-white/5 transition-all duration-300 overflow-hidden ${isHovered ? 'border-blue-500/30 -translate-y-2' : ''}`}>
-        <div className="p-8 flex flex-col h-full">
+      <div className={`relative flex flex-col h-full glass rounded-[2rem] sm:rounded-[2.5rem] border border-white/5 transition-all duration-300 overflow-hidden ${isHovered ? 'border-blue-500/30 -translate-y-2' : ''}`}>
+        <div className="p-6 sm:p-8 flex flex-col h-full">
           <div className="flex justify-between items-start mb-6">
-            <div className={`p-3.5 rounded-2xl bg-white/5 ${repo.isPrivate ? 'text-orange-400' : 'text-blue-400'}`}>
-              {repo.isPrivate ? <Lock className="w-6 h-6" /> : <Globe className="w-6 h-6" />}
+            <div className={`p-3 rounded-2xl bg-white/5 ${repo.isPrivate ? 'text-orange-400' : 'text-blue-400'}`}>
+              {repo.isPrivate ? <Lock className="w-5 h-5 sm:w-6 sm:h-6" /> : <Globe className="w-5 h-5 sm:w-6 sm:h-6" />}
             </div>
             <div className="flex items-center gap-3">
               {repo.stars > 0 && (
@@ -41,16 +41,16 @@ function RepoCard({ repo, index, onViewInfo }) {
             </div>
           </div>
 
-          <h4 className="text-2xl font-bold text-white mb-4 tracking-tight group-hover:text-blue-400 transition-colors">
+          <h4 className="text-xl sm:text-2xl font-bold text-white mb-4 tracking-tight group-hover:text-blue-400 transition-colors">
             {repo.name}
           </h4>
 
-          <p className="text-gray-400 text-sm font-light leading-relaxed mb-6 line-clamp-3">
+          <p className="text-gray-450 text-sm font-light leading-relaxed mb-6 line-clamp-3">
             {repo.description || "Sophisticated project architecture and specialized logic developed for enterprise-grade application workflows."}
           </p>
 
           {/* Quick Stats - Always Visible */}
-          <div className="mb-8 space-y-4">
+          <div className="mb-6 sm:mb-8 space-y-4">
             <div className="flex flex-wrap gap-2">
               {repo.topics?.slice(0, 3).map(topic => (
                 <span key={topic} className="px-2 py-0.5 bg-white/5 border border-white/10 text-gray-400 text-[9px] font-bold rounded-lg uppercase">
@@ -240,7 +240,7 @@ export default function GitHubStats() {
         </div>
 
         {/* Trophies Section */}
-        <div className="glass p-10 rounded-[3rem] border border-white/5 shadow-2xl relative overflow-hidden mb-16">
+        <div className="glass p-6 sm:p-10 rounded-[2rem] sm:rounded-[3rem] border border-white/5 shadow-2xl relative overflow-hidden mb-16">
           <div className="absolute top-0 right-0 p-10 opacity-5 pointer-events-none">
             <Trophy className="w-64 h-64 text-blue-500" />
           </div>
@@ -249,11 +249,11 @@ export default function GitHubStats() {
             <div className="p-3 bg-yellow-500/10 rounded-xl text-yellow-400">
               <Trophy className="w-6 h-6" />
             </div>
-            <h3 className="text-2xl font-bold text-white tracking-tight">Merit Trophies</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">Merit Trophies</h3>
           </div>
 
-          <div className="relative w-full overflow-hidden">
-            <div className="flex flex-wrap justify-center gap-6">
+          <div className="relative w-full overflow-x-auto py-2 px-1 custom-scrollbar">
+            <div className="flex justify-start md:justify-center min-w-[800px] md:min-w-0">
               <img 
                 src={`https://github-profile-trophy.vercel.app/?username=${stats.user.login}&theme=radical&no-frame=true&margin-w=4&row=1&column=7`}
                 alt="GitHub Trophies"
@@ -266,12 +266,12 @@ export default function GitHubStats() {
         {/* Repository Explorer */}
         <div className="space-y-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-            <h3 className="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
-              <BookOpen className="w-8 h-8 text-blue-400" /> Repository Explorer
+            <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight flex items-center gap-3">
+              <BookOpen className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400 shrink-0" /> Repository Explorer
             </h3>
             
             <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-              <div className="relative flex-grow">
+              <div className="relative flex-grow w-full sm:w-auto">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
                 <input 
                   type="text" 
@@ -282,12 +282,12 @@ export default function GitHubStats() {
                 />
               </div>
               
-              <div className="flex p-1 bg-white/5 rounded-2xl border border-white/10">
+              <div className="flex p-1 bg-white/5 rounded-2xl border border-white/10 justify-between sm:justify-start w-full sm:w-auto">
                 {['all', 'public', 'private'].map((f) => (
                   <button
                     key={f}
                     onClick={() => setFilter(f)}
-                    className={`px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-widest transition-all ${filter === f ? 'bg-blue-600 text-white' : 'text-gray-500 hover:text-gray-300'}`}
+                    className={`px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-widest transition-all flex-1 sm:flex-none text-center cursor-pointer ${filter === f ? 'bg-blue-600 text-white' : 'text-gray-500 hover:text-gray-300'}`}
                   >
                     {f}
                   </button>
@@ -316,7 +316,7 @@ export default function GitHubStats() {
         {/* README Modal */}
         <AnimatePresence>
           {selectedRepo && (
-            <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
+            <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
               <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -328,34 +328,34 @@ export default function GitHubStats() {
                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                className="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col max-h-[80vh]"
+                className="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col h-full sm:h-auto max-h-[90vh] sm:max-h-[80vh]"
               >
-                <div className="p-8 border-b border-white/5 flex justify-between items-center bg-white/[0.02]">
+                <div className="p-6 sm:p-8 border-b border-white/5 flex justify-between items-center bg-white/[0.02]">
                   <div>
-                    <h3 className="text-2xl font-bold text-white tracking-tight">{selectedRepo}</h3>
-                    <p className="text-blue-400 text-sm font-medium">Project Documentation</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">{selectedRepo}</h3>
+                    <p className="text-blue-400 text-xs sm:text-sm font-medium">Project Documentation</p>
                   </div>
                   <button 
                     onClick={() => setSelectedRepo(null)}
-                    className="p-3 hover:bg-white/5 rounded-full transition-colors text-gray-500 hover:text-white"
+                    className="p-2 sm:p-3 hover:bg-white/5 rounded-full transition-colors text-gray-500 hover:text-white cursor-pointer"
                   >
-                    <X className="w-6 h-6" />
+                    <X className="w-5 h-5 sm:w-6 sm:h-6" />
                   </button>
                 </div>
                 
-                <div className="p-10 overflow-y-auto custom-scrollbar flex-grow bg-[#050505]">
+                <div className="p-6 sm:p-10 overflow-y-auto custom-scrollbar flex-grow bg-[#050505]">
                   {loadingReadme ? (
                     <div className="flex flex-col items-center justify-center py-20 gap-4">
                       <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
-                      <p className="text-gray-500 font-medium tracking-widest uppercase text-xs">Analyzing repository content...</p>
+                      <p className="text-gray-550 font-medium tracking-widest uppercase text-[10px] sm:text-xs">Analyzing repository content...</p>
                     </div>
                   ) : (
                     <div className="prose prose-invert max-w-none 
                       prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight
-                      prose-p:text-gray-300 prose-p:leading-relaxed
+                      prose-p:text-gray-300 prose-p:leading-relaxed text-sm sm:text-base
                       prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline
                       prose-code:text-blue-300 prose-code:bg-white/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none
-                      prose-pre:bg-white/[0.03] prose-pre:border prose-pre:border-white/10 prose-pre:rounded-2xl prose-pre:p-6
+                      prose-pre:bg-white/[0.03] prose-pre:border prose-pre:border-white/10 prose-pre:rounded-2xl prose-pre:p-4 sm:prose-pre:p-6
                       prose-img:rounded-2xl prose-img:shadow-2xl
                       prose-ul:text-gray-300 prose-ol:text-gray-300
                       prose-blockquote:border-l-4 prose-blockquote:border-blue-500/50 prose-blockquote:bg-blue-500/5 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-2xl
@@ -381,7 +381,7 @@ export default function GitHubStats() {
                               <img 
                                 {...props} 
                                 src={src} 
-                                className="rounded-2xl border border-white/10 shadow-2xl my-10 mx-auto block max-w-full h-auto"
+                                className="rounded-2xl border border-white/10 shadow-2xl my-6 sm:my-10 mx-auto block max-w-full h-auto"
                                 loading="lazy"
                               />
                             );
@@ -394,10 +394,10 @@ export default function GitHubStats() {
                   )}
                 </div>
                 
-                <div className="p-6 border-t border-white/5 bg-white/[0.02] flex justify-end">
+                <div className="p-4 sm:p-6 border-t border-white/5 bg-white/[0.02] flex justify-end">
                    <button 
                     onClick={() => setSelectedRepo(null)}
-                    className="px-8 py-3 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-all shadow-xl"
+                    className="w-full sm:w-auto text-center px-8 py-3 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-all shadow-xl cursor-pointer"
                   >
                     Close
                   </button>

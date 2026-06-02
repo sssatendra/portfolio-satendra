@@ -49,14 +49,14 @@ export default function BentoGrid() {
           whileHover={{ y: -5, transition: { duration: 0.2 } }}
           transition={{ duration: 0.4, delay: i * 0.1 }}
           viewport={{ once: true }}
-          className={`glass p-8 rounded-[2.5rem] flex flex-col justify-between group relative overflow-hidden h-full min-h-[16rem] ${item.className}`}
+          className={`glass p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] flex flex-col justify-between group relative overflow-hidden h-full min-h-[16rem] ${item.className}`}
         >
           {/* Background Gradient Detail */}
           <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
           
           <div className="relative z-10">
             <div className="flex items-center justify-between mb-6">
-              <div className="p-4 bg-white/5 rounded-2xl group-hover:bg-white/10 transition-colors shadow-inner">
+              <div className="p-3.5 sm:p-4 bg-white/5 rounded-2xl group-hover:bg-white/10 transition-colors shadow-inner">
                 {item.icon}
               </div>
               <div className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 group-hover:text-gray-300 transition-colors">
@@ -64,15 +64,15 @@ export default function BentoGrid() {
               </div>
             </div>
             
-            <h3 className="text-2xl font-bold mb-3 tracking-tight group-hover:text-blue-400 transition-colors">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 tracking-tight group-hover:text-blue-400 transition-colors">
               {item.title}
             </h3>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-[90%]">
+            <p className="text-gray-405 text-sm leading-relaxed max-w-[90%] font-light">
               {item.description}
             </p>
           </div>
 
-          <div className="relative z-10 mt-8 flex justify-end">
+          <div className="relative z-10 mt-6 sm:mt-8 flex justify-end">
             <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:border-blue-500/50 group-hover:bg-blue-500/10 transition-all opacity-0 group-hover:opacity-100">
               <ExternalLink className="w-3 h-3 text-blue-400" />
             </div>
