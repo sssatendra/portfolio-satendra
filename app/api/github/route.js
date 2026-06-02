@@ -37,11 +37,6 @@ export async function GET() {
               name
               color
             }
-            readme: object(expression: "HEAD:README.md") {
-              ... on Blob {
-                text
-              }
-            }
           }
         }
         contributionsCollection {
@@ -95,7 +90,7 @@ export async function GET() {
           .filter(r => !hiddenRepos.includes(r.name))
           .map(r => ({
             name: r.name,
-            description: r.description || (r.readme ? r.readme.text.slice(0, 150).replace(/[#*`]/g, '').trim() + '...' : null),
+            description: r.description || null,
             isPrivate: r.isPrivate,
             stars: r.stargazerCount,
             forks: r.forkCount,
