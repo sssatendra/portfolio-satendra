@@ -284,10 +284,17 @@ export default function GitHubStats() {
             </p>
           </div>
           
-          <div className="flex items-center gap-5 p-5 glass rounded-3xl border border-white/10 shadow-2xl">
-            <img src={stats.user.avatar} alt="GitHub Profile" className="w-16 h-16 rounded-2xl object-cover border border-white/20 shadow-lg" />
+          <div className="flex items-center gap-5 p-5 glass-card rounded-3xl border border-white/10 shadow-2xl">
+            <div className="relative group/avatar">
+              <div className="p-[2px] bg-gradient-to-tr from-blue-500 via-cyan-400 to-indigo-500 rounded-2xl shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+                <img src="/Sat_bg_blue.png" alt="Satendra Kumar" className="w-16 h-16 rounded-[14px] object-cover bg-black" />
+              </div>
+              <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-[#090a0f] rounded-full shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
+            </div>
             <div>
-              <h4 className="text-xl font-bold text-white tracking-tight">{stats.user.name || stats.user.login}</h4>
+              <h4 className="text-xl font-bold text-white font-mono tracking-tight flex items-center gap-1.5">
+                {stats.user.name || stats.user.login} <ShieldCheck className="w-4 h-4 text-blue-400 shrink-0" />
+              </h4>
               <p className="text-blue-400 text-xs font-mono">@{stats.user.login}</p>
               <div className="flex items-center gap-3 mt-2 text-[10px] font-mono text-gray-400">
                 <span>{stats.followers} Followers</span>

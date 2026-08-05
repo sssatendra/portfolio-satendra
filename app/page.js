@@ -32,7 +32,8 @@ import {
   Sparkles,
   Zap,
   Lock,
-  Terminal
+  Terminal,
+  ShieldCheck
 } from 'lucide-react';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import GitHubStats from '../components/GitHubStats';
@@ -415,17 +416,21 @@ export default function Home() {
                 {/* Header Bar */}
                 <div className="flex items-center justify-between pb-5 border-b border-white/10">
                   <div className="flex items-center gap-4">
-                    <div className="relative">
-                      <img
-                        src={main.image}
-                        alt={main.name}
-                        className="w-14 h-14 rounded-2xl object-cover border border-white/20 shadow-md"
-                      />
-                      <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-black rounded-full" />
+                    <div className="relative group/avatar">
+                      <div className="p-[2px] bg-gradient-to-tr from-blue-500 via-cyan-400 to-indigo-500 rounded-2xl shadow-[0_0_20px_rgba(59,130,246,0.4)] group-hover/avatar:shadow-[0_0_25px_rgba(59,130,246,0.7)] transition-all duration-300">
+                        <img
+                          src={main.image.startsWith('/') ? main.image : `/${main.image}`}
+                          alt={main.name}
+                          className="w-16 h-16 sm:w-18 sm:h-18 rounded-[14px] object-cover bg-black group-hover/avatar:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-[#090a0f] rounded-full shadow-[0_0_10px_rgba(16,185,129,0.8)]" title="System Status: Active" />
                     </div>
                     <div>
-                      <h3 className="text-white font-bold text-base leading-tight">{main.name}</h3>
-                      <p className="text-xs text-blue-400 font-medium">Senior Software Engineer</p>
+                      <h3 className="text-white font-bold text-base sm:text-lg leading-tight flex items-center gap-1.5 font-mono">
+                        {main.name} <ShieldCheck className="w-4 h-4 text-blue-400 shrink-0" />
+                      </h3>
+                      <p className="text-xs text-blue-400 font-mono font-medium mt-0.5">Senior Full-Stack Engineer</p>
                     </div>
                   </div>
 
@@ -623,14 +628,14 @@ export default function Home() {
               title="Backend Engine"
               subtitle="Distributed Microservices"
               icon={<Cpu className="w-5 h-5 text-amber-400" />}
-              skills={["Python", "Flask", "NestJS", "Celery", "Redis", "WebSockets"]}
+              skills={["Python", "Flask", "Apache Kafka", "Celery", "Redis", "WebSockets"]}
               accentColor="amber"
             />
             <SkillCard
               title="Cloud & Infrastructure"
               subtitle="DevOps & Security"
               icon={<Layers className="w-5 h-5 text-cyan-400" />}
-              skills={["AWS EC2/S3", "Docker", "Nginx", "SSL/TLS", "CI/CD"]}
+              skills={["AWS EC2/S3", "Docker", "Kubernetes (Learning)", "Nginx", "SSL/TLS"]}
               accentColor="cyan"
             />
             <SkillCard
@@ -653,8 +658,8 @@ export default function Home() {
               {[
                 { id: 'all', label: 'All Stack' },
                 { id: 'frontend', label: 'Frontend' },
-                { id: 'backend', label: 'Backend & Trading' },
-                { id: 'cloud', label: 'Cloud & DevOps' },
+                { id: 'backend', label: 'Backend & Streaming' },
+                { id: 'cloud', label: 'Cloud & K8s' },
                 { id: 'data', label: 'Data & BI' }
               ].map((tab) => (
                 <button
@@ -679,8 +684,8 @@ export default function Home() {
                   if (skillCategory === 'all') return true;
                   const name = skill.name.toLowerCase();
                   if (skillCategory === 'frontend') return name.includes('react') || name.includes('redux') || name.includes('mobile');
-                  if (skillCategory === 'backend') return name.includes('python') || name.includes('trading') || name.includes('celery') || name.includes('nest') || name.includes('websocket');
-                  if (skillCategory === 'cloud') return name.includes('aws') || name.includes('devops') || name.includes('security');
+                  if (skillCategory === 'backend') return name.includes('python') || name.includes('kafka') || name.includes('trading') || name.includes('celery') || name.includes('nest') || name.includes('websocket');
+                  if (skillCategory === 'cloud') return name.includes('aws') || name.includes('docker') || name.includes('kubernetes') || name.includes('devops') || name.includes('security');
                   if (skillCategory === 'data') return name.includes('database') || name.includes('bi');
                   return true;
                 })
